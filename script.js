@@ -1,15 +1,15 @@
-// let colorPalette = document.getElementById('color-palette');
+let color = ['black', 'red', 'green', 'blue'];
 
-function paletteCreation() {
+for(let index = 0; index < color.length; index += 1) {
+    paletteCreation(color[index]);
+}
+
+function paletteCreation(color) {
     let colorPalette = document.getElementById('color-palette');
     let newElement = document.createElement('div');
     newElement.className = 'color';
-    colorPalette.appendChild(newElement)
+    newElement.classList.add(color);
+    colorPalette.appendChild(newElement);
+
+}
     
-}
-paletteCreation()
-
-
-function addElementChild (parent, element) {
-
-}
