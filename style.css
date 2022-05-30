@@ -14,7 +14,8 @@
 }
 
 #pixel-board {
-    width: 260px;
+    width: 220px;
+    line-height: 0.5em;
 }
 
 
@@ -22,7 +23,10 @@
 
 .pixel {
     background-color: white;
-    margin: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
 }
 
 .color {
@@ -30,6 +34,10 @@
     height: 50px;
     border: 1px solid black;
     display: inline-block;
+}
+
+.selected {
+    
 }
 
 .black {
