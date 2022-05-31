@@ -10,7 +10,7 @@ for (let index = 0; index < color.length; index += 1) {
 
 // cria painel de pixels
 for (let index = 1; index <= 25; index += 1) {
-    pixelBoardCreation();
+    pixelBoardCreation().id = index;
 }
 
 
@@ -34,6 +34,17 @@ function paletteCreation(color) {
 function pixelBoardCreation() {
     let pixelBoard = document.getElementById('pixel-board');
     let newElement = document.createElement('div');
+    newElement.addEventListener('click', function(event) {
+        let target = event.target;
+        console.log(target);
+        let selectedColor = document.getElementsByClassName('selected');
+        console.log(selectedColor);
+        let objCss = window.getComputedStyle(selectedColor);
+        console.log(objCss);
+        let bgColor = objCss.getPropertyValue('background-color');        
+        console.log(bgColor);
+    })
     newElement.className = 'pixel';
     pixelBoard.appendChild(newElement);
+    return newElement;
 }
