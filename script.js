@@ -22,7 +22,7 @@ function paletteCreation(color) {
             selecao[index].classList.remove('selected');
         }
         newElement.classList.add('selected');
-      })
+      });
     newElement.className = 'color';
     newElement.classList.add(color);
     colorPalette.appendChild(newElement);
