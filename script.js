@@ -43,15 +43,18 @@ function pixelBoardCreation() {
         }
         let objCss = window.getComputedStyle(cor);
         let bgColor = objCss.getPropertyValue('background-color'); 
-        newElement.style.backgroundColor = bgColor;   
-        
-        
-        // console.log(target);
-        // console.log(selectedColor);
-        // console.log(objCss);
-        // console.log(bgColor);
+        newElement.style.backgroundColor = bgColor;        
     })
     newElement.className = 'pixel';
     pixelBoard.appendChild(newElement);
     return newElement;
+}
+
+function clearBorad() {
+    let pixel = document.getElementsByClassName('pixel');
+    let arrayPixel;
+    for(let item of pixel){
+        arrayPixel = item;
+        arrayPixel.style.backgroundColor = 'white';
+    }
 }
