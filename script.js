@@ -36,13 +36,20 @@ function pixelBoardCreation() {
     let newElement = document.createElement('div');
     newElement.addEventListener('click', function(event) {
         let target = event.target;
-        console.log(target);
         let selectedColor = document.getElementsByClassName('selected');
-        console.log(selectedColor);
-        let objCss = window.getComputedStyle(selectedColor);
-        console.log(objCss);
-        let bgColor = objCss.getPropertyValue('background-color');        
-        console.log(bgColor);
+        let cor;
+        for(let item of selectedColor){
+            cor = item;
+        }
+        let objCss = window.getComputedStyle(cor);
+        let bgColor = objCss.getPropertyValue('background-color'); 
+        newElement.style.backgroundColor = bgColor;   
+        
+        
+        // console.log(target);
+        // console.log(selectedColor);
+        // console.log(objCss);
+        // console.log(bgColor);
     })
     newElement.className = 'pixel';
     pixelBoard.appendChild(newElement);
